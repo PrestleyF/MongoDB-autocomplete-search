@@ -19,13 +19,12 @@ $(document).ready(function (){
            .then(result => result.json())
            .then(result => {
              $('#cast').empty()
-             result.cast.forEach(cast => {
-                $(cast).append(`<li>${cast}</li>`)
-             });
+             result.cast.forEach(cast => 
+                {
+                    $("#cast").append(`<li>${cast}</li>`)
+             })
              $('img').attr('src',result.poster)
            })
     }
  })
-}
-
-)
+})
